@@ -266,7 +266,6 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 		TabButton.TextTransparency = 0.500
 		
 		local UICorner_55 = ("UICorner")
-		UICorner_55.CornerRadius = UDim.new(0, 5)
 		UICorner_55.Parent = TabButton
 
 		local MainFramePage = Instance.new("ScrollingFrame")
