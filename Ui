@@ -142,6 +142,7 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 	Name.TextColor3 = Color3.fromRGB(147,112,219) -- 147 112 219
 	Name.TextSize = 17.000
 	
+	
 	local Hub = Instance.new("TextLabel")
 	Hub.Name = "Hub"
 	Hub.Parent = Top
@@ -151,7 +152,7 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 	Hub.Size = UDim2.new(0, 81, 0, 27)
 	Hub.Font = Enum.Font.GothamSemibold
 	Hub.Text = "  | "..gamename
-	Hub.TextColor3 = Color3.fromRGB(0,128,255) -- 147 112 219
+	Hub.TextColor3 = Color3.fromRGB(147,112,219) -- 147 112 219
 	Hub.TextSize = 17.000
 	Hub.TextXAlignment = Enum.TextXAlignment.Left
 
@@ -258,7 +259,7 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 		TabButton.Name = text.."Server"
 		TabButton.Text = text
 		TabButton.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
-		TabButton.BorderColor3 = Color3.fromRGB(147,112,219)
+		TabButton.BorderColor3 = Color3.fromRGB(0,128,255) --147 112 219
 		TabButton.BorderSizePixel = 3
 		TabButton.Size = UDim2.new(0, 130, 0, 23)
 		TabButton.Font = Enum.Font.GothamSemibold
