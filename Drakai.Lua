@@ -1,21 +1,17 @@
---[[
 
-Drakai Library
-
-]]
 local PlaceName = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId)
 
-    if not game:IsLoaded() then repeat game.Loaded:Wait() until game:IsLoaded() end
-    
-    repeat wait() until game:GetService("Players")
-    
-    if not game:GetService("Players").LocalPlayer.Character:FindFirstChild("HumanoidRootPart") then repeat wait() until game:GetService("Players").LocalPlayer.Character:FindFirstChild("HumanoidRootPart") end
-        
-    wait(1)
+if not game:IsLoaded() then repeat game.Loaded:Wait() until game:IsLoaded() end
+
+repeat wait() until game:GetService("Players")
+
+if not game:GetService("Players").LocalPlayer.Character:FindFirstChild("HumanoidRootPart") then repeat wait() until game:GetService("Players").LocalPlayer.Character:FindFirstChild("HumanoidRootPart") end
+
+wait(1)
 
 do local GUI = game.CoreGui:FindFirstChild("Darkrai");if GUI then GUI:Destroy();end;if _G.Color == nil then
-       _G.Color = Color3.fromRGB(255,0,0)
-   end 
+		_G.Color = Color3.fromRGB(6,255,255)
+	end 
 end
 
 local UserInputService = game:GetService("UserInputService")
@@ -75,16 +71,16 @@ end
 local DarkraiX = {}
 
 function DarkraiX:ToggleUi()
-if game.CoreGui:FindFirstChild("Darkrai").Enabled == true then -- oh am dumb
-game.CoreGui:FindFirstChild("Darkrai").Enabled = false
-else
-game.CoreGui:FindFirstChild("Darkrai").Enabled = true
-end
+	if game.CoreGui:FindFirstChild("Darkrai").Enabled == true then -- oh am dumb
+		game.CoreGui:FindFirstChild("Darkrai").Enabled = false
+	else
+		game.CoreGui:FindFirstChild("Darkrai").Enabled = true
+	end
 end
 
 function DarkraiX:Window(text,gamenme,logo,keybind)
-    local hubname = text
-    local gamename = gamenme
+	local hubname = text
+	local gamename = gamenme
 	local uihide = false
 	local abc = false
 	local logo = logo or 0
@@ -92,9 +88,9 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 	local keybind = keybind or Enum.KeyCode.RightControl
 	local yoo = string.gsub(tostring(keybind),"Enum.KeyCode.","")
 	if gamename == "" then 
-	    gamename = ""..PlaceName.Name
-    end
-	
+		gamename = ""..PlaceName.Name
+	end
+
 	local Darkrai = Instance.new("ScreenGui") -- guess i am using hubname wrong
 	Darkrai.Name = "Darkrai" -- wait
 	Darkrai.Parent = game.CoreGui
@@ -108,7 +104,7 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 	Main.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
 	Main.Position = UDim2.new(0.5, 0, 0.5, 0)
 	Main.Size = UDim2.new(0, 0, 0, 0)
-	
+
 	Main:TweenSize(UDim2.new(0, 656, 0, 400),"Out","Quad",0.4,true)
 
 	local MCNR = Instance.new("UICorner")
@@ -143,9 +139,12 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 	Name.Size = UDim2.new(0, 61, 0, 27)
 	Name.Font = Enum.Font.GothamSemibold
 	Name.Text = hubname
-	Name.TextColor3 = Color3.fromRGB(147,112,219)
+	Name.TextColor3 = Color3.fromRGB(147,112,219) -- 147 112 219
 	Name.TextSize = 17.000
-
+	
+	local UICorner_25 = Instance.new("UICorner_25")
+	UICorner_25.Parent = Hub
+	
 	local Hub = Instance.new("TextLabel")
 	Hub.Name = "Hub"
 	Hub.Parent = Top
@@ -155,7 +154,7 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 	Hub.Size = UDim2.new(0, 81, 0, 27)
 	Hub.Font = Enum.Font.GothamSemibold
 	Hub.Text = "  | "..gamename
-	Hub.TextColor3 = Color3.fromRGB(147,112,219)
+	Hub.TextColor3 = Color3.fromRGB(0,128,255) -- 147 112 219
 	Hub.TextSize = 17.000
 	Hub.TextXAlignment = Enum.TextXAlignment.Left
 
@@ -239,7 +238,7 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 	UIPageLayout.GamepadInputEnabled = false
 	UIPageLayout.ScrollWheelInputEnabled = false
 	UIPageLayout.TouchInputEnabled = false
-	
+
 	MakeDraggable(Top,Main)
 
 	UserInputService.InputBegan:Connect(function(input)
@@ -253,17 +252,17 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 			end
 		end
 	end)
-	
+
 	local uitab = {}
-	
+
 	function uitab:AddTab(text)
 		local TabButton = Instance.new("TextButton")
 		TabButton.Parent = ScrollTab
 		TabButton.Name = text.."Server"
 		TabButton.Text = text
 		TabButton.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
-	    TabButton.BorderColor3 = Color3.fromRGB(147,112,219)
-        TabButton.BorderSizePixel = 3
+		TabButton.BorderColor3 = Color3.fromRGB(147,112,219)
+		TabButton.BorderSizePixel = 3
 		TabButton.Size = UDim2.new(0, 130, 0, 23)
 		TabButton.Font = Enum.Font.GothamSemibold
 		TabButton.TextColor3 = Color3.fromRGB(225, 225, 225)
@@ -280,10 +279,10 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 		MainFramePage.Size = UDim2.new(0, 490, 0, 365)
 		MainFramePage.CanvasSize = UDim2.new(0, 0, 0, 0)
 		MainFramePage.ScrollBarThickness = 0
-		
+
 		local UIPadding = Instance.new("UIPadding")
 		local UIListLayout = Instance.new("UIListLayout")
-		
+
 		UIPadding.Parent = MainFramePage
 		UIPadding.PaddingLeft = UDim.new(0, 10)
 		UIPadding.PaddingTop = UDim.new(0, 10)
@@ -291,7 +290,7 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 		UIListLayout.Padding = UDim.new(0,15)
 		UIListLayout.Parent = MainFramePage
 		UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
-		
+
 		TabButton.MouseButton1Click:Connect(function()
 			for i,v in next, ScrollTab:GetChildren() do
 				if v:IsA("TextButton") then
@@ -333,14 +332,14 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 			UIPageLayout:JumpToIndex(1)
 			abc = true
 		end
-		
+
 		game:GetService("RunService").Stepped:Connect(function()
 			pcall(function()
 				MainFramePage.CanvasSize = UDim2.new(0,0,0,UIListLayout.AbsoluteContentSize.Y + 20)
 				ScrollTab.CanvasSize = UDim2.new(0,0,0,PLL.AbsoluteContentSize.Y + 20)
 			end)
 		end)
-		
+
 		local main = {}
 		function main:AddButton(text,callback)
 			local Button = Instance.new("Frame")
@@ -349,15 +348,15 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 			local UICorner_2 = Instance.new("UICorner")
 			local Black = Instance.new("Frame")
 			local UICorner_3 = Instance.new("UICorner")
-			
+
 			Button.Name = "Button"
 			Button.Parent = MainFramePage
 			Button.BackgroundColor3 = _G.Color
 			Button.Size = UDim2.new(0, 470, 0, 31)
-			
+
 			UICorner.CornerRadius = UDim.new(0, 5)
 			UICorner.Parent = Button
-			
+
 			TextBtn.Name = "TextBtn"
 			TextBtn.Parent = Button
 			TextBtn.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
@@ -368,10 +367,10 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 			TextBtn.Text = text
 			TextBtn.TextColor3 = Color3.fromRGB(225, 225, 225)
 			TextBtn.TextSize = 15.000
-			
+
 			UICorner_2.CornerRadius = UDim.new(0, 5)
 			UICorner_2.Parent = TextBtn
-			
+
 			Black.Name = "Black"
 			Black.Parent = Button
 			Black.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
@@ -379,7 +378,7 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 			Black.BorderSizePixel = 0
 			Black.Position = UDim2.new(0, 1, 0, 1)
 			Black.Size = UDim2.new(0, 468, 0, 29)
-			
+
 			UICorner_3.CornerRadius = UDim.new(0, 5)
 			UICorner_3.Parent = Black
 
@@ -513,16 +512,16 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 			local UIPadding = Instance.new("UIPadding")
 			local DropButton = Instance.new("TextButton")
 			local DropImage = Instance.new("ImageLabel")
-			
+
 			Dropdown.Name = "Dropdown"
 			Dropdown.Parent = MainFramePage
 			Dropdown.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
 			Dropdown.ClipsDescendants = true
 			Dropdown.Size = UDim2.new(0, 470, 0, 31)
-			
+
 			UICorner.CornerRadius = UDim.new(0, 5)
 			UICorner.Parent = Dropdown
-			
+
 			DropTitle.Name = "DropTitle"
 			DropTitle.Parent = Dropdown
 			DropTitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -532,7 +531,7 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 			DropTitle.Text = text.. " : "
 			DropTitle.TextColor3 = Color3.fromRGB(225, 225, 225)
 			DropTitle.TextSize = 15.000
-			
+
 			DropScroll.Name = "DropScroll"
 			DropScroll.Parent = DropTitle
 			DropScroll.Active = true
@@ -543,15 +542,15 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 			DropScroll.Size = UDim2.new(0, 470, 0, 100)
 			DropScroll.CanvasSize = UDim2.new(0, 0, 0, 0)
 			DropScroll.ScrollBarThickness = 3
-			
+
 			UIListLayout.Parent = DropScroll
 			UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
 			UIListLayout.Padding = UDim.new(0, 5)
-			
+
 			UIPadding.Parent = DropScroll
 			UIPadding.PaddingLeft = UDim.new(0, 5)
 			UIPadding.PaddingTop = UDim.new(0, 5)
-			
+
 			DropImage.Name = "DropImage"
 			DropImage.Parent = Dropdown
 			DropImage.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -560,7 +559,7 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 			DropImage.Rotation = 180.000
 			DropImage.Size = UDim2.new(0, 20, 0, 20)
 			DropImage.Image = "rbxassetid://6031090990"
-			
+
 			DropButton.Name = "DropButton"
 			DropButton.Parent = Dropdown
 			DropButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -826,7 +825,7 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 					callback(Value)
 				end)
 			end
-			
+
 			AHEHE.MouseButton1Down:Connect(function()
 				Value = math.floor((((tonumber(max) - tonumber(min)) / 448) * bar1.AbsoluteSize.X) + tonumber(min)) or 0
 				pcall(function()
@@ -954,7 +953,7 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 			local Label = Instance.new("TextLabel")
 			local PaddingLabel = Instance.new("UIPadding")
 			local labelfunc = {}
-	
+
 			Label.Name = "Label"
 			Label.Parent = MainFramePage
 			Label.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -969,7 +968,7 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 			PaddingLabel.PaddingLeft = UDim.new(0,15)
 			PaddingLabel.Parent = Label
 			PaddingLabel.Name = "PaddingLabel"
-	
+
 			function labelfunc:Set(newtext)
 				Label.Text = newtext
 			end
@@ -981,20 +980,20 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 			local Sep1 = Instance.new("Frame")
 			local Sep2 = Instance.new("TextLabel")
 			local Sep3 = Instance.new("Frame")
-			
+
 			Seperator.Name = "Seperator"
 			Seperator.Parent = MainFramePage
 			Seperator.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 			Seperator.BackgroundTransparency = 1.000
 			Seperator.Size = UDim2.new(0, 470, 0, 20)
-			
+
 			Sep1.Name = "Sep1"
 			Sep1.Parent = Seperator
 			Sep1.BackgroundColor3 = _G.Color
 			Sep1.BorderSizePixel = 0
 			Sep1.Position = UDim2.new(0, 0, 0, 10)
 			Sep1.Size = UDim2.new(0, 80, 0, 1)
-			
+
 			Sep2.Name = "Sep2"
 			Sep2.Parent = Seperator
 			Sep2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -1005,7 +1004,7 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 			Sep2.Text = text
 			Sep2.TextColor3 = Color3.fromRGB(255, 255, 255)
 			Sep2.TextSize = 14.000
-			
+
 			Sep3.Name = "Sep3"
 			Sep3.Parent = Seperator
 			Sep3.BackgroundColor3 = _G.Color
@@ -1017,14 +1016,14 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 		function main:AddLine()
 			local Linee = Instance.new("Frame")
 			local Line = Instance.new("Frame")
-			
+
 			Linee.Name = "Linee"
 			Linee.Parent = MainFramePage
 			Linee.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 			Linee.BackgroundTransparency = 1.000
 			Linee.Position = UDim2.new(0, 0, 0.119999997, 0)
 			Linee.Size = UDim2.new(0, 470, 0, 20)
-			
+
 			Line.Name = "Line"
 			Line.Parent = Linee
 			Line.BackgroundColor3 = _G.Color
