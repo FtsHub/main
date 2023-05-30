@@ -142,7 +142,7 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 	Name.TextColor3 = Color3.fromRGB(147,112,219) -- 147 112 219
 	Name.TextSize = 17.000
 	
-	local UICorner_25 = Instance.new("UICorner_25")
+	local UICorner_25 = Instance.new("UICorner")
 	UICorner_25.Parent = Hub
 	
 	local Hub = Instance.new("TextLabel")
