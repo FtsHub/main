@@ -141,6 +141,15 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 	Name.TextColor3 = Color3.fromRGB(147,112,219) -- Hub Name
 	Name.TextSize = 17.000
 	
+	coroutine.wrap(A)()
+	local function B() -- RunText.RunScript 
+	local script = Instance.new('Script', Name)
+
+	while true do
+		script.Parent.TextColor3 = Color3.fromHSV(tick()%5/5,1,1)
+		wait(0.05)
+		end		
+	end
 	
 	local Hub = Instance.new("TextLabel")
 	Hub.Name = "Hub"
