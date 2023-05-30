@@ -138,18 +138,8 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 	Name.Size = UDim2.new(0, 61, 0, 27)
 	Name.Font = Enum.Font.GothamSemibold
 	Name.Text = hubname
-	Name.TextColor3 = Color3.fromRGB(147,112,219) -- Hub Name
+	Name.TextColor3 = Color3.fromRGB(255,0,255) -- Hub Name
 	Name.TextSize = 17.000
-	
-	coroutine.wrap(A)()
-	local function B() -- RunText.RunScript 
-	local script = Instance.new('Script', Name)
-
-	while true do
-		script.Parent.TextColor3 = Color3.fromHSV(tick()%5/5,1,1)
-		wait(0.05)
-		end		
-	end
 	
 	local Hub = Instance.new("TextLabel")
 	Hub.Name = "Hub"
@@ -160,7 +150,7 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 	Hub.Size = UDim2.new(0, 81, 0, 27)
 	Hub.Font = Enum.Font.GothamSemibold
 	Hub.Text = "  | "..gamename
-	Hub.TextColor3 = Color3.fromRGB(147,112,219) -- Hub Name
+	Hub.TextColor3 = Color3.fromRGB(255,0,255) -- Hub Name
 	Hub.TextSize = 17.000
 	Hub.TextXAlignment = Enum.TextXAlignment.Left
 
