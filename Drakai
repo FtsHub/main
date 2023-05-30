@@ -250,10 +250,6 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 	end)
 
 	local uitab = {}
-	
-	local MCNR = Instance.new("UICorner")
-	MCNR.Name = "MCNR"
-	MCNR.Parent = TabButton
 
 	function uitab:AddTab(text)
 		local TabButton = Instance.new("TextButton")
@@ -268,6 +264,10 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 		TabButton.TextColor3 = Color3.fromRGB(225, 225, 225)
 		TabButton.TextSize = 15.000
 		TabButton.TextTransparency = 0.500
+		
+		local UICorner_55 = ("UICorner")
+		UICorner_55.CornerRadius = UDim.new(0, 5)
+		UICorner_55.Parent = TabButton
 
 		local MainFramePage = Instance.new("ScrollingFrame")
 		MainFramePage.Name = text.."_Page"
