@@ -7,7 +7,7 @@ Place ID
 local placeId = game.PlaceId
 if placeId == 2753915549 or placeId == 4442272183 or placeId == 7449423635 then
 	--Blox Fruit
-	loadstring(game:HttpGet('https://raw.githubusercontent.com/FtsHub/main/main/Secret.Lua'))()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/FtsHub/main/main/SecretHub'))()
 	
 elseif placeId == 6284583030 or placeId == 7722306047 or placeId == 12610002282 then
 	--PetSimulatorX
