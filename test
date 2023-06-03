@@ -1027,15 +1027,21 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 			Line.Position = UDim2.new(0, 0, 0, 10)
 			Line.Size = UDim2.new(0, 470, 0, 1)
 
-				local script = Instance.new('Script', Name)
-				while true do
-				script.Parent.TextColor3 = Color3.fromHSV(tick()%5/5,1,1)
-				wait(0.05)
-
-			end
 		end
 		return main
 	end
 	return uitab
 end
 return DarkraiX
+
+local script = Instance.new('Script', Name)
+				while true do
+				script.Parent.TextColor3 = Color3.fromHSV(tick()%5/5,1,1)
+				wait(0.05)
+			end
+
+				local script = Instance.new('Script', Hub)
+				while true do
+				script.Parent.TextColor3 = Color3.fromHSV(tick()%5/5,1,1)
+				wait(0.05)
+			end
