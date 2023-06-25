@@ -142,10 +142,10 @@ Submit_2.TextStrokeColor3 = Color3.fromRGB(0, 255, 255)
 Submit_2.TextStrokeTransparency = 0.000
 Submit_2.TextWrapped = true
 Submit_2.MouseButton1Click:Connect(function()
-	if TextBox_2.Text == "WLAOFWJWFK2001-OL2KWE" then
+	if TextBox_2.Text == "019KMEMWLOSKWQ" then
 		Frame.Visible = false
 		wait(0.5)
-		loadstring(game:HttpGet('https://raw.githubusercontent.com/FtsHub/main/main/Makori%20Hub'))()
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/FtsHub/main/main/Pado.lua'))()
 	end
 end)
 
