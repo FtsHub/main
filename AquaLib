@@ -121,7 +121,7 @@ lib.createWindow = function(name, title, draggable)
 
 	SideBar.Name = "SideBar"
 	SideBar.Parent = MainFrame
-	SideBar.BackgroundColor3 = Color3.fromRGB(35, 255, 255) -- 35, 255, 255
+	SideBar.BackgroundColor3 = Color3.fromRGB(35, 255, 255) -- 35
 	SideBar.BorderSizePixel = 0
 	SideBar.Position = UDim2.new(0.015, 0, -0.002, 0)
 	SideBar.Size = UDim2.new(0, 157, 0, 324)
@@ -1375,18 +1375,3 @@ lib.createWindow = function(name, title, draggable)
 end
 
 return lib
-Footer
-© 2023 GitHub, Inc.
-Footer navigation
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
-AquaLib/AquaLib.lua at main · TheoTheEpic/AquaLib · GitHub
