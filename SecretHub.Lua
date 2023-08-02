@@ -1,6 +1,6 @@
---[[ SECRET HUB ]]--
+-- [[ Secret Hub ]] --
 
--- Instances: 20 | Scripts: 1 | Modules: 0
+local viewport = workspace.CurrentCamera.ViewportSize
 local G2L = {};
 
 -- StarterGui.ScreenGui
@@ -14,7 +14,7 @@ G2L["2"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["2"]["BackgroundTransparency"] = 0.4000000059604645;
 G2L["2"]["Size"] = UDim2.new(0, 386, 0, 278);
 G2L["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["2"]["Position"] = UDim2.new(0.3815529942512512, 0, 0.3008730709552765, 0);
+G2L["2"]["Position"] = UDim2.fromOffset((viewport.X/2) - (G2L["2"].Size.X.Offset / 2), (viewport.Y/2) - (G2L["2"].Size.Y.Offset / 2));
 G2L["2"]["Name"] = [[Information]];
 
 -- StarterGui.ScreenGui.Information.UICorner
@@ -27,25 +27,24 @@ G2L["4"]["Color"] = Color3.fromRGB(0, 255, 255);
 G2L["4"]["Thickness"] = 3;
 G2L["4"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
 
--- StarterGui.ScreenGui.Information.2
+-- StarterGui.ScreenGui.Information.Ver
 G2L["5"] = Instance.new("TextLabel", G2L["2"]);
 G2L["5"]["TextStrokeTransparency"] = 0.699999988079071;
 G2L["5"]["SizeConstraint"] = Enum.SizeConstraint.RelativeYY;
 G2L["5"]["BorderSizePixel"] = 0;
 G2L["5"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["5"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["5"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["5"]["TextStrokeColor3"] = Color3.fromRGB(0, 0, 255);
 G2L["5"]["TextSize"] = 22;
 G2L["5"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["5"]["Size"] = UDim2.new(0, 386, 0, 39);
 G2L["5"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["5"]["Text"] = [[  [ 1 ] Added Race V4]];
-G2L["5"]["Name"] = [[2]];
+G2L["5"]["Text"] = [[Current Version 1.7]];
+G2L["5"]["Name"] = [[Ver]];
 G2L["5"]["BackgroundTransparency"] = 1;
-G2L["5"]["Position"] = UDim2.new(0, 0, 0.14028777182102203, 0);
+G2L["5"]["Position"] = UDim2.new(0, 0, 0.08633093535900116, 0);
 
--- StarterGui.ScreenGui.Information.3
+-- StarterGui.ScreenGui.Information.1
 G2L["6"] = Instance.new("TextLabel", G2L["2"]);
 G2L["6"]["TextStrokeTransparency"] = 0.699999988079071;
 G2L["6"]["SizeConstraint"] = Enum.SizeConstraint.RelativeYY;
@@ -58,12 +57,12 @@ G2L["6"]["TextSize"] = 22;
 G2L["6"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["6"]["Size"] = UDim2.new(0, 386, 0, 39);
 G2L["6"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["6"]["Text"] = [[  [ 2 ] Fixed Auto Farm]];
-G2L["6"]["Name"] = [[3]];
+G2L["6"]["Text"] = [[  [ 1 ] Added User Hub]];
+G2L["6"]["Name"] = [[1]];
 G2L["6"]["BackgroundTransparency"] = 1;
-G2L["6"]["Position"] = UDim2.new(0, 0, 0.28057554364204407, 0);
+G2L["6"]["Position"] = UDim2.new(0, 0, 0.24820144474506378, 0);
 
--- StarterGui.ScreenGui.Information.4
+-- StarterGui.ScreenGui.Information.2
 G2L["7"] = Instance.new("TextLabel", G2L["2"]);
 G2L["7"]["TextStrokeTransparency"] = 0.699999988079071;
 G2L["7"]["SizeConstraint"] = Enum.SizeConstraint.RelativeYY;
@@ -76,12 +75,12 @@ G2L["7"]["TextSize"] = 22;
 G2L["7"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["7"]["Size"] = UDim2.new(0, 386, 0, 39);
 G2L["7"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["7"]["Text"] = [[  [ 3 ] Auto Find Monster]];
-G2L["7"]["Name"] = [[4]];
+G2L["7"]["Text"] = [[  [ 2 ] Fixed Bug]];
+G2L["7"]["Name"] = [[2]];
 G2L["7"]["BackgroundTransparency"] = 1;
-G2L["7"]["Position"] = UDim2.new(0, 0, 0.4208633005619049, 0);
+G2L["7"]["Position"] = UDim2.new(0, 0, 0.3884892165660858, 0);
 
--- StarterGui.ScreenGui.Information.5
+-- StarterGui.ScreenGui.Information.3
 G2L["8"] = Instance.new("TextLabel", G2L["2"]);
 G2L["8"]["TextStrokeTransparency"] = 0.699999988079071;
 G2L["8"]["SizeConstraint"] = Enum.SizeConstraint.RelativeYY;
@@ -94,12 +93,12 @@ G2L["8"]["TextSize"] = 22;
 G2L["8"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["8"]["Size"] = UDim2.new(0, 386, 0, 39);
 G2L["8"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["8"]["Text"] = [[  [ 4 ] Mastery Fixed (Soon)]];
-G2L["8"]["Name"] = [[5]];
+G2L["8"]["Text"] = [[  [ 3 ] Fixed Bring Mobs]];
+G2L["8"]["Name"] = [[3]];
 G2L["8"]["BackgroundTransparency"] = 1;
-G2L["8"]["Position"] = UDim2.new(0, 0, 0.5611510872840881, 0);
+G2L["8"]["Position"] = UDim2.new(0, 0, 0.528777003288269, 0);
 
--- StarterGui.ScreenGui.Information.6
+-- StarterGui.ScreenGui.Information.4
 G2L["9"] = Instance.new("TextLabel", G2L["2"]);
 G2L["9"]["TextStrokeTransparency"] = 0.699999988079071;
 G2L["9"]["SizeConstraint"] = Enum.SizeConstraint.RelativeYY;
@@ -112,10 +111,10 @@ G2L["9"]["TextSize"] = 22;
 G2L["9"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["9"]["Size"] = UDim2.new(0, 386, 0, 39);
 G2L["9"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["9"]["Text"] = [[  [ 5 ] Devil Fruit Stats Fixed]];
-G2L["9"]["Name"] = [[6]];
+G2L["9"]["Text"] = [[  [ 4 ] Fixed Mastery (Soon)]];
+G2L["9"]["Name"] = [[4]];
 G2L["9"]["BackgroundTransparency"] = 1;
-G2L["9"]["Position"] = UDim2.new(0, 0, 0.701438844203949, 0);
+G2L["9"]["Position"] = UDim2.new(0, 0, 0.6690647602081299, 0);
 
 -- StarterGui.ScreenGui.Information.Frame
 G2L["a"] = Instance.new("Frame", G2L["2"]);
@@ -158,14 +157,13 @@ G2L["10"] = Instance.new("TextLabel", G2L["d"]);
 G2L["10"]["TextWrapped"] = true;
 G2L["10"]["BorderSizePixel"] = 0;
 G2L["10"]["RichText"] = true;
-G2L["10"]["TextScaled"] = true;
 G2L["10"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["10"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["10"]["TextSize"] = 1;
+G2L["10"]["TextSize"] = 35;
 G2L["10"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["10"]["Size"] = UDim2.new(0, 221, 0, 50);
 G2L["10"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["10"]["Text"] = [[Information Update]];
+G2L["10"]["Text"] = [[Secret Hub]];
 G2L["10"]["Name"] = [[HubName]];
 G2L["10"]["Position"] = UDim2.new(-2.690380096435547, 0, -0.6605626940727234, 0);
 
@@ -197,8 +195,7 @@ G2L["14"] = Instance.new("LocalScript", G2L["13"]);
 local function C_14()
 local script = G2L["14"];
 	script.Parent.MouseButton1Click:Connect(function()
-		script.Parent.Parent.Parent.Information.Visible = false 
-		
+		script.Parent.Parent.Parent.Information.Visible = false
 		if false then
 		end
 		loadstring(game:HttpGet('https://raw.githubusercontent.com/FtsHub/main/main/Secret%20Hub'))()
