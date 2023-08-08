@@ -1,4 +1,7 @@
 -- Instances: 20 | Scripts: 1 | Modules: 0
+
+local viewport = workspace.CurrentCamera.ViewportSize
+
 local G2L = {};
 
 -- StarterGui.ScreenGui
@@ -12,7 +15,7 @@ G2L["2"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["2"]["BackgroundTransparency"] = 0.4000000059604645;
 G2L["2"]["Size"] = UDim2.new(0, 386, 0, 278);
 G2L["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["2"]["Position"] = UDim2.new(0.3815529942512512, 0, 0.3008730709552765, 0);
+G2L["2"]["Position"] = UDim2.fromOffset((viewport.X/2) - (G2L["2"].Size.X.Offset / 2), (viewport.Y/2) - (G2L["2"].Size.Y.Offset / 2));
 G2L["2"]["Name"] = [[Information]];
 
 -- StarterGui.ScreenGui.Information.UICorner
