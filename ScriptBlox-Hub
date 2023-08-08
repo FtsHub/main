@@ -196,7 +196,7 @@ local script = G2L["14"];
 		script.Parent.Parent.Parent.Information.Visible = false
 		if false then
 		end
-		loadstring(game:HttpGet('https://raw.githubusercontent.com/FtsHub/main/main/Secret%20Hub'))()
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/FtsHub/main/main/ScriptBlox'))()
 	end)
 	
 end;
